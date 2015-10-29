@@ -1,5 +1,5 @@
 # battery-dim
-Automatic dimming in Linux when AC adapter is unplugged
+Automatic screen backlight dimming in Linux when AC adapter is unplugged
 
 This collection of scripts is used to provide some functionality in Linux to
 automatically dim the screen brightness when the AC adapter is unplugged (and
