@@ -16,7 +16,7 @@ acpid should also come with `acpi_listen`, which will be used for determining
 the AC adapter plug and unplug events for configuration.
 
 ## Installation
-1. Set the various variables in config.sh as desired:
+1. Set the various variables in `config.sh` as desired:
   * `BATTERYDIM` is the location where the scripts will be installed. This is
     only used during installation
   * `ACPI_UNPLUG` and `ACPI_PLUG` are the ACPI events for unplugging the AC
@@ -87,4 +87,4 @@ system that uses systemd and acpid.
 Also, the config and installation are not particularly user-friendly.
 The ideal would be to get this functionality into GNOME, KDE, etc. so that it is
 there by default and is configurable via GUI.
-Alas delving into those DEs is a bit more than I want to do ;)
+Alas delving into those DEs is a bit more than I want to do. ;)
