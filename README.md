@@ -42,6 +42,7 @@ the AC adapter plug and unplug events for configuration.
     and then use the `brightness` and `max_brightness` files to set the
     brightness to the max value; if you've got the right device, you should see
     your brightness go up to max.
+
     For example, if I hypothesized that `/sys/class/backlight/intel_backlight`
     was the right device, I'd decrease my screen brightness so that it's
     signifiantly dimmer, and then run (as root):
@@ -74,7 +75,10 @@ the unplug or plug states, just set the appropriate values in `config.sh` in the
 installation directory; the scripts will read from that file automatically.
 
 ## Uninstallation
-1. Run `uninstall.sh` as root.
+1. Run `uninstall.sh` as root. Note that this wipes out the installation
+   directory as well as stopping and removing the systemd services and acpid
+   event listeners, so if you've put anything in that folder or made any changes
+   you want to keep, get them to a safe place first.
 
 ## Notes
 I've only tested this on Ubuntu 15.04 and 15.10, but it should work on any other
