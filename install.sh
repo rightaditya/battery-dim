@@ -8,7 +8,8 @@
 install -d "$BATTERYDIM"
 install -m 644 -t "$BATTERYDIM" config.sh 
 
-install -m 755 -t "$BATTERYDIM" plug-brightness.sh unplug-brightness.sh
+install -m 755 -t "$BATTERYDIM" plug-brightness.sh unplug-brightness.sh \
+    uninstall.sh
 
 cat > "$BATTERYDIM"/backlight.sh << EOF
 #!/usr/bin/env bash
