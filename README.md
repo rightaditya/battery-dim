@@ -43,18 +43,25 @@ the AC adapter plug and unplug events for configuration.
     brightness to the max value; if you've got the right device, you should see
     your brightness go up to max.
     For example, if I hypothesized that `/sys/class/backlight/intel_backlight`
-    was the right device, I'd decrease my screen brightness so that it's visibly
-    different, and then run (as root):
+    was the right device, I'd decrease my screen brightness so that it's
+    signifiantly dimmer, and then run (as root):
+
     ```
     # cat /sys/class/backlight/intel_backlight/max_brightness >
     /sys/class/backlight/intel_backlight/brightness
     ```
+
     Or if you want to do it via sudo:
+
     ```
     $ cat /sys/class/backlight/intel_backlight/max_brightness | sudo tee
     /sys/class/backlight/intel_backlight/brightness
     ```
+
+    And I should see my screen brightness go up to the max value to confirm that
+    I've got the right device.
 2. Run `install.sh` as root:
+
    ```
    $ sudo ./install.sh
    ```
