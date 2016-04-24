@@ -93,6 +93,7 @@ EOF
 
 systemctl daemon-reload
 systemctl enable boot-backlight.service sleep-backlight.service
+systemctl restart acpid.service
 
 # NOTE: this service may be different on different machines
 systemctl mask systemd-backlight@backlight\:intel_backlight.service
