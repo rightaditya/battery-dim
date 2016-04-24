@@ -81,8 +81,8 @@ installation directory; the scripts will read from that file automatically.
    you want to keep, get them to a safe place first.
 
 ## Notes
-I've only tested this on Ubuntu 15.04 and 15.10, but it should work on any other
-system that uses systemd and acpid.
+I've only tested this on Ubuntu 15.04, 15.10, and 16.04, but it should work on
+any other system that uses systemd and acpid.
 
 Also, the config and installation are not particularly user-friendly.
 The ideal would be to get this functionality into GNOME, KDE, etc. so that it is
