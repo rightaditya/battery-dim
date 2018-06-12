@@ -9,7 +9,6 @@ Functionality to check the AC adapter status at boot or resume from suspend is
 done with systemd services.
 
 ## Necessary programs
-The scripts require `acpi` (`acpi` package in Ubuntu) to run, and of course
 acpid is required for listening for the AC adapter events (`acpid` package in
 Ubuntu, but it should be installed by default).
 acpid should also come with `acpi_listen`, which will be used for determining
@@ -81,7 +80,7 @@ installation directory; the scripts will read from that file automatically.
    you want to keep, get them to a safe place first.
 
 ## Notes
-I've only tested this on Ubuntu 15.04–17.10, but it should work on
+I've only tested this on Ubuntu 15.04–18.04, but it should work on
 any other system that uses systemd and acpid.
 
 Also, the config and installation are not particularly user-friendly.
