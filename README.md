@@ -9,10 +9,11 @@ Functionality to check the AC adapter status at boot or resume from suspend is
 done with systemd services.
 
 ## Necessary programs
-acpid is required for listening for the AC adapter events (`acpid` package in
-Ubuntu, but it should be installed by default).
-acpid should also come with `acpi_listen`, which will be used for determining
-the AC adapter plug and unplug events for configuration.
+`acpi` (`acpi` package in Ubuntu) is required for the AC adapter state to be
+queried on boot/resume, and acpid is required for listening for the AC adapter
+events (`acpid` package in Ubuntu, but it should be installed by default).
+`acpi_listen` (included in the `acpid` package in Ubuntu) is used for
+determining the AC adapter plug and unplug events for configuration.
 
 ## Installation
 1. Set the various variables in `config.sh` as desired:
