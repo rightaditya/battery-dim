@@ -81,8 +81,10 @@ installation directory; the scripts will read from that file automatically.
    you want to keep, get them to a safe place first.
 
 ## Notes
-I've only tested this on Ubuntu 15.04–18.04, but it should work on
+I've only tested this on Ubuntu 15.04–18.04.2, but it should work on
 any other system that uses systemd and acpid.
+At some point, my 18.04 system stopped producing the relevant ACPI events, but
+the problem can be fixed by upgrading to 18.04.2.
 
 Also, the config and installation are not particularly user-friendly.
 The ideal would be to get this functionality into GNOME, KDE, etc. so that it is
