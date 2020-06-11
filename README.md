@@ -31,10 +31,10 @@ determining the AC adapter plug and unplug events for configuration.
     unplugged and plugged states, respectively.
     These are specified as percentages of the maximum value, so 25 means 25% of
     the max and 100 is 100% of the max (i.e. the brightest possible).
-  * `BACKLIGHT` specifies the backlight device in the filesystem.
-    My laptop, for example, has two backlight devices (one for the keyboard
-    backlight, and one for the screen), so the correct device needs to be
-    specified.
+  * `BACKLIGHT` specifies the backlight device to use in the filesystem, since
+    there may be more than one such device available.
+    (My laptop, for example, used to have two backlight devices—one for the
+    keyboard backlight, and one for the screen.)
     Mine is `/sys/class/backlight/intel_backlight`.
     Take a look in `/sys/class/backlight` to see the different backlight options
     you have.
@@ -81,7 +81,7 @@ installation directory; the scripts will read from that file automatically.
    you want to keep, get them to a safe place first.
 
 ## Notes
-I've only tested this on Ubuntu 15.04–18.04.2, but it should work on
+I've only tested this on Ubuntu 15.04–20.04, but it should work on
 any other system that uses systemd and acpid.
 At some point, my 18.04 system stopped producing the relevant ACPI events, but
 the problem can be fixed by upgrading to 18.04.2.

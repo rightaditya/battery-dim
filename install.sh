@@ -45,7 +45,7 @@ case \$1/\$2 in
     ;;
 esac
 EOF
-chmod 755 "$BATTERYDIM"/backlight.sh
+chmod 775 "$BATTERYDIM"/backlight.sh
 
 echo "event=$ACPI_UNPLUG" > /etc/acpi/events/ac_unplugged
 echo "action=$BATTERYDIM/unplug-brightness.sh" >> /etc/acpi/events/ac_unplugged

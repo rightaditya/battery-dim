@@ -18,5 +18,5 @@ BACKLIGHT="/sys/class/backlight/intel_backlight"
 # changed?
 # NOTE: this is currently unimplemented, because I don't really need it; it
 # shouldn't be too hard to implement though
-REMEMBER_STATE=true
+REMEMBER_STATE=false
 STATEFILE=/tmp/acstate
