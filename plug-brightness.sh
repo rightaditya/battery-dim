@@ -4,7 +4,9 @@
 # Read config
 . /opt/battery-dim/config.sh
 
-max=$(cat "$BACKLIGHT/max_brightness")
+read max < "$BACKLIGHT/max_brightness"
+tgt="$PLUG_BRIGHTNESS"
 
-echo Setting brightness to $PLUG_BRIGHTNESS% of max.
-echo $(($max * $PLUG_BRIGHTNESS / 100)) > "$BACKLIGHT/brightness"
+echo Setting brightness to $tgt% of max.
+echo "(100*$MIN_BRIGHTNESS)+(100-$MIN_BRIGHTNESS)*$tgt)*$max/10000" | bc \
+  > "$BACKLIGHT/brightness"

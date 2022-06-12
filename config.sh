@@ -11,6 +11,14 @@ ACPI_PLUG="ac_adapter ACPI0003:00 00000080 00000001"
 UNPLUG_BRIGHTNESS=25
 PLUG_BRIGHTNESS=100
 
+# Minimum brightness; this is for aligning with the DE's increments; e.g.,
+# GNOME's increments are 5% of the *usable* range, which it restricts to 1% of
+# the maximum (on the low end)... the brightness keys therefore have an
+# absolute delta of 5% * (100 - 1) = 4.95%
+# Of course, this is moot if the (UN)PLUG_BRIGHTNESS values aren't multiples
+# of 5...
+MIN_BRIGHTNESS=1
+
 # backlight device; it should show up in /sys/class/backlight
 BACKLIGHT="/sys/class/backlight/intel_backlight"
 

@@ -47,23 +47,26 @@ determining the AC adapter plug and unplug events for configuration.
     was the right device, I'd decrease my screen brightness so that it's
     signifiantly dimmer, and then run (as root):
 
-    ```
+    ```bash
     # cat /sys/class/backlight/intel_backlight/max_brightness >
     /sys/class/backlight/intel_backlight/brightness
     ```
 
     Or if you want to do it via sudo:
 
-    ```
+    ```bash
     $ cat /sys/class/backlight/intel_backlight/max_brightness | sudo tee
     /sys/class/backlight/intel_backlight/brightness
     ```
 
     And I should see my screen brightness go up to the max value to confirm that
     I've got the right device.
+  * `MIN_BACKLIGHT` specifies the minimum allowable backlight percentage. This
+    is to align with the increments used by the desktop environment for the
+    brightness buttons. The default value of `1` is correct for GNOME.
 2. Run `install.sh` as root:
 
-   ```
+   ```bash
    $ sudo ./install.sh
    ```
 3. Enjoy the functionality that Windows and OSX have out of the box!
@@ -81,8 +84,8 @@ installation directory; the scripts will read from that file automatically.
    you want to keep, get them to a safe place first.
 
 ## Notes
-I've only tested this on Ubuntu 15.04–20.04, but it should work on
-any other system that uses systemd and acpid.
+I've tested this on Ubuntu 15.04–20.04 as well as Manjaro (as of mid-2022); it
+should work on any other system that uses systemd and acpid.
 At some point, my 18.04 system stopped producing the relevant ACPI events, but
 the problem can be fixed by upgrading to 18.04.2.
 
